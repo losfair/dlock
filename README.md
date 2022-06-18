@@ -31,3 +31,5 @@ $ curl "https://dlock.univalent.net/lock/01899dc0-2742-44f9-9c7b-01830851b299/re
 
 - Provides monotonic lease numbers that can be used as fencing tokens.
 - Locks that haven't been used for more than 7 days will be removed.
+
+[GitHub](https://github.com/losfair/dlock)
