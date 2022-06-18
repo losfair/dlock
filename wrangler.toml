@@ -1,0 +1,26 @@
+name = "dlock"
+type = "javascript"
+zone_id = ""
+account_id = ""
+workers_dev = false
+compatibility_date = "2022-06-18"
+compatibility_flags = ["durable_object_alarms"]
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "modules"
+main = "./worker.mjs"
+
+[durable_objects]
+bindings = [{name = "LEASE", class_name = "Lease"}]
+
+[[migrations]]
+tag = "v1" # Should be unique for each entry
+new_classes = ["Lease"]
+
+[env.staging]
+name = "dlock-staging"
+
+[env.staging.durable_objects]
+bindings = [{name = "LEASE", class_name = "Lease"}]

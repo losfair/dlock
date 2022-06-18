@@ -1,2 +1,3 @@
-# do-lock
+# dlock
+
 Distributed-Lock-as-a-Service implemented on Cloudflare Durable Objects.
