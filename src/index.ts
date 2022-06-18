@@ -16,7 +16,7 @@ interface AppEnv {
   LEASE: DurableObjectNamespace,
 }
 
-const pathRegex = /^\/([0-9a-zA-Z_-]{1,128})\/((acquire)|(release)|(status))$/
+const pathRegex = /^\/lock\/([0-9a-zA-Z_-]{1,128})\/((acquire)|(release)|(status))$/
 
 export default {
   async fetch(request: Request, env: AppEnv): Promise<Response> {
